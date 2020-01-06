@@ -1,0 +1,175 @@
+.body-quiz {
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+.start-game,
+.play-game,
+.end-game {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+
+    &__header {
+        font-size: 5rem;
+        color: #141d25;
+        margin: 4rem 0;
+    }
+
+    & .far {
+       font-size: 10rem;
+        color: #5dea07;
+        // visibility: hidden;
+        // opacity: 0;
+        display: none;
+    }
+
+    & .fa-smile-wink,
+    & .fa-smile,
+    & .fa-meh,
+    & .fa-frown,
+    & .fa-sad-tear {
+        display: block;
+    }
+    
+    & .fa-smile {
+        color: #a2e907;
+    }
+
+    & .fa-meh {
+        color: #ffff01;
+    }
+
+    & .fa-frown {
+        color: #ffa10b;
+    }
+
+    & .fa-sad-tear {
+        color: #ff1416;
+    }
+    
+}
+
+#question {
+    color: rgb(53, 48, 48);
+    font-size: 3rem;
+    margin: 2rem 1rem;
+
+    @include respond(phone) { //width < 600?
+        font-size: 3rem;
+    }
+}
+
+.restriction-sign {
+    width: 7rem;
+    height: 7rem;
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.choice-container {
+    margin: 1rem 0;
+    padding-left:0;
+    width: 40%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    border: 2px solid #28a745;
+    border-radius: 1rem;
+
+    @include respond(tab-port) { //width < 600?
+        height: 13%;
+        width: 50%;
+    }
+
+    
+&:hover {
+    box-shadow: 0 4px 10px 0 rgba(46, 48, 49, 0.2);
+    transform: translateY(-1px);
+    transition: transform 150ms;
+}
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// letters
+.choice-prefix {
+    padding: 2.7%;
+    font-size: 3rem;
+    height: 100%;
+    width: 10%;
+    background-color: #28a745;
+    color: white;
+    border-radius: 0.5rem 0 0 0.5rem;
+    left: 0;
+
+    @include respond(tab-land) { //width < 600?
+        padding: 2.7%;
+    }
+
+    @include respond(tab-port) { //width < 600?
+        padding: 5.7% 3% 5% 3%;
+    }
+
+    @include respond(phone) { //width < 600?
+        padding: 9.7% 7% 2.7% 2%;
+    }
+}
+
+// choices
+p.choice-text {
+    height: auto;
+    width: 90%;
+    right: 0;
+    color: rgb(48, 47, 54);
+    padding: 1rem 1rem;
+    // background-color: cornflowerblue;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#hud-item {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 1.4rem;
+    color: rgb(48, 47, 54);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+
+
+.progressBar {
+    width: 20rem;
+    height: 4rem;
+    border: #28a745 solid 2px;
+    border-radius: 1rem;
+    position: relative;
+}
+
+#progressBarFull {
+    background-color: #28a745;
+    height: 100%;
+    width: 0%;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kcycle</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/1aa36dae85.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Header -->
+  <header class="header" id="header home-header">
+    <div class="header__nav-bar">
+      <a href="/index.html"><img src="/images/logo.svg" alt="logo" class="header__logo"></a>
+      <nav class="header__nav">
+          <div id="menuToggle">
+            <input class="burger-input" type="checkbox" />
+            <!-- burger-spans -->
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li class="li--home">
+                <a class ="link" href="/index.html">Home</a>
+              </li>
+              <li class="li--motoring-school">
+                <a class ="link" href="#motoring-school">Motoring School</a>
+              </li>
+              <li class="li--quiz">
+                <a class ="link" href="quiz-start.html">Quiz</a>
+              </li>
+              <li class="li--about">
+                <a class ="link" href="#about">About</a>
+              </li>
+              <li class="li--address">
+                <a class ="link" href="address.html">Address</a>
+              </li>
+            </ul>
+
+          </div>
+      </nav>
+    </div>
+    
+      <div class="header__body animated">
+        <h1 class="header__body--primary">Ride With Us</h1>
+        <h3 class="header__body--tertiary">We offer the best <span class="header__body--tertiary--bold">motoring course</span></h3> 
+      </div>
+
+      <div class="header__touch animated">
+        <a class="header__touch--link" href="#motoring-school">
+          <i class="header__touch--arrow__1 fas fa-angle-down animated"></i>
+          <i class="header__touch--arrow__2 fas fa-angle-down animated"></i>
+        </a>            
+      </div>
+
+      <div id="scroll-top">
+        <a class="arrow-link" href=""> 
+          <i class="animated arrow-up fas fa-chevron-circle-up"></i>
+        </a>
+      </div>
+  </header>
+
+<!-- main -->
+  <main class="main">
+
+    <section class="motoring-school" id="motoring-school">
+      <div class="heading__secondary">Most common courses</div>
+      <div class="card-wrap">
+
+        <div class="card animated">
+          <img src="/images/card-1.jpg" alt="" class="card__img">
+          <h3 class="card--header">category<span class="card--header--span"> B</span></h3>
+          <p class="card--p">Drivers in possession of a valid Kurdish car 
+            driving license may apply for the 125cc Motorcycle Course.</p>
+            <button class="card--btn card--btn--swap"><a href="#popup-1" class="card--btn__link animated">more</a></button> 
+        </div>
+
+        <div class="card animated">
+          <img src="/images/card-2.jpg" alt="" class="card__img">
+          <h3 class="card--header">category <span class="card--header--span">A2</span></h3>
+          <p class="card--p">Motorcycles of a power not exceeding 35 kW.</p>
+            <button class="card--btn card--btn--swap"><a href="#popup-2" class="card--btn__link animated">more</a></button> 
+        </div>
+
+        <div class="card animated">
+          <img src="/images/card-3.jpg" alt="" class="card__img">
+          <h3 class="card--header">category <span class="card--header--span">A</span></h3>
+          <p class="card--p">Full Motorcycle License</p>
+            <button class="card--btn card--btn--swap"><a href="#popup-3" class="card--btn__link animated">more</a></button> 
+        </div>
+      </div>
+
+<!-- popup 1 -->
+      <div class="popup animated" id="popup-1">
+        <div class="popup__content">
+          <a class="popup__close animated" href="#motoring-school">&times;</a>
+
+          <div class="popup__left">
+            <div class="popup__category-wrap">
+              <p class="popup__category">category B<span class="bold">125cc</span></p>
+              <p class="popup__desc"><span class="bold">Requirments:</span> Drivers in possession of a valid Kurdish car 
+                driving license may apply for the 125cc Motorcycle Course. <span class="bold">lesson:</span> 8-10 lessons of 45min each are required. <span class="bold b-last"> price per lesson: $15</span> </p>
+            </div>
+          </div>
+          <div class="popup__right">
+
+            <div class="popup__submit">
+              <div>
+                  <h3 class="submit__header">BOOK NOW</h3 >
+              </div>
+              <form action="" class="form">
+                  <input type="text" placeholder="full name">
+                  <input type="email" placeholder="email">
+                  <!-- radio button -->
+                  <label class="radio">
+                    <input type="radio" name="category" value="B" checked>
+                    <span>B</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="category" value="A2">
+                    <span>A1</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="category" value="A">
+                    <span>A</span>
+                  </label>
+                  <button type="submit" value="Submit" class="popup__btn btn btn--swap"><a href="#" class="btn__link animated">submit</a></button> 
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+<!-- popup 2 -->
+      <div class="popup animated" id="popup-2">
+        <div class="popup__content">
+          <a class="popup__close animated" href="#motoring-school">&times;</a>
+
+          <div class="popup__left">
+            <div class="popup__category-wrap">
+              <p class="popup__category">category <span class="bold">A2</span></p>
+              <p class="popup__desc"><span class="bold">Requirments:</span>Up to 35KW – Age 20+<span class="bold">lesson:</span> 15-20 lessons of 45min each are required. <span class="bold b-last"> price per lesson: $10</span> </p>
+            </div>
+          </div>
+          <div class="popup__right">
+
+            <div class="popup__submit">
+              <div >
+                  <h3 class="submit__header">BOOK NOW</h3 >
+              </div>
+              <form action="" class="form">
+                  <input type="text" placeholder="full name">
+                  <input type="email" placeholder="email">
+                  
+          <!-- radio button -->
+                    <label class="radio">
+                        <input type="radio" name="category" value="B" checked>
+                        <span>B</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="category" value="A2" checked>
+                        <span>A2</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="category" value="A">
+                        <span>A</span>
+                    </label>
+          
+                  <button type="submit" value="Submit" class="popup__btn btn btn--swap"><a href="#" class="btn__link animated">submit</a></button> 
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+<!-- popup 3 -->
+      <div class="popup animated" id="popup-3">
+        <div class="popup__content">
+          <a class="popup__close animated" href="#motoring-school">&times;</a>
+
+          <div class="popup__left">
+            <div class="popup__category-wrap">
+              <p class="popup__category">category <span class="bold">A</span></p>
+              <p class="popup__desc"><span class="bold">Requirments:</span>Open capacity – Age 24+ OR Min. 22 years of age and at least 2 years experience in A2;<span class="bold">lesson:</span> 20 lessons of 45min each are required. <span class="bold b-last"> price per lesson: $20</span> </p>
+              
+            </div>
+          </div>
+          <div class="popup__right">
+
+            <div class="popup__submit">
+              <div >
+                  <h3 class="submit__header">BOOK NOW</h3 >
+              </div>
+              <form action="" class="form">
+                  <input type="text" placeholder="full name">
+                  <input type="email" placeholder="email">
+                  <!-- radio button -->
+                  <label class="radio">
+                    <input type="radio" name="category" value="B">
+                    <span>B</span>
+                  </label>
+                <label class="radio">
+                    <input type="radio" name="category" value="A2">
+                    <span>A1</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="category" value="A" checked>
+                    <span>A</span>
+                </label>
+                  <button type="submit" value="Submit" class="popup__btn btn btn--swap"><a href="#" class="btn__link animated">submit</a></button> 
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="about" id="about">
+      <h1 class="heading__secondary">about us</h1>
+
+      <div  class="about__wrap">
+
+        <div class="about__features">
+          <img src="/images/about-1.jpg" alt="" class="about__features--1 about__features--ph">
+          <img src="/images/about-2.jpg" alt="" class="about__features--2 about__features--ph">
+          <img src="/images/about-3.jpg" alt="" class="about__features--3 about__features--ph">
+        </div>
+
+        <p class="about--p">
+          Kcycle was Established in 1994 by Sam Marco, who today is still managing the company. At Kcycle we understand that everyone is different and all driving lessons are tailored to suit your individual needs. With Kcycle you can be confident that you will learn to drive in a safe, friendly and comfortable environment. Kcycle Motoring School is also a Member of the M.S.A (MOTORING SCHOOLS ASSOCIATION).<br> <br>
+           
+          Choosing the right Motoring School and Instructors is the most important thing to consider
+          before booking your first driving lesson. The right Motoring School will ensure that you will
+          be provided with:<br> <br> <br>
+          
+          - Professional Qualified Tutors <br>
+          - Dual Controlled Vehicles <br>
+          - Individual tuition <br>
+        </p>
+
+      </div>
+    </section>
+
+    <section class="comments">
+      <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="/images/video.mp4" type="video/mp4">
+                        <source src="/images/video.webm" type="video/webm">
+                        Your browser is not supported
+                    </video>
+      </div>
+      <h2 class="heading__secondary">We love what we do</h2>
+
+      <div class="comments__wrap">
+        <div class="comments__inner">
+          <div class="comments__shape">
+            <img src="images/customer-Sarah.jpg" alt="" class="comments__img img">
+            <figcaption class="comments__caption">Sara Conor</figcaption>
+          </div>
+            <p class="comments__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aliquid et corrupti deserunt quam omnis aliquam tempore inventore laboriosam assumenda expedita maxime ipsa eaque, exercitationem aut eius incidunt dicta necessitatibus corporis nemo nesciunt.</p>
+        </div>
+        <div class="comments__inner">
+          <div class="comments__shape">
+            <img src="images/customer-sam.jpg" alt="" class="comments__img img">
+            <figcaption class="comments__caption">Sam Cortis</figcaption>
+          </div>
+            <p class="comments__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aliquid et corrupti deserunt quam omnis aliquam tempore inventore laboriosam assumenda expedita maxime ipsa eaque, exercitationem aut eius incidunt dicta necessitatibus corporis nemo nesciunt. </p>
+        </div>
+        <div class="comments__inner">
+          <div class="comments__shape">
+            <img src="images/customer-John.jpg" alt="" class="comments__img img">
+            <figcaption class="comments__caption">John Henry</figcaption>
+          </div>
+            <p class="comments__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aliquid et corrupti deserunt quam omnis aliquam tempore inventore laboriosam assumenda expedita maxime ipsa eaque, exercitationem aut eius incidunt dicta necessitatibus corporis nemo nesciunt.</p>
+        </div>
+
+          <!-- <a class="comments__btn" href="#" rel="nofollow noopener">read more</a> -->
+      </div>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+     
+      
+  </main>
+
+  <footer class="footer">
+    <div class="footer__p">
+      <p class="footer__p--owner">Designed by M.Gurun for demonstration purposes. | &copy; 2019</p>
+    </div>
+    <img src="/images/logo.svg" alt="logo" class="footer__logo ">
+  </footer>
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

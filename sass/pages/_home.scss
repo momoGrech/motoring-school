@@ -1,0 +1,49 @@
+.main {
+    width: 100%;
+    position: relative;
+    top: 100vh;
+    z-index:2;
+    height: 300vh;
+}
+
+.motoring-school {
+    background-color: #494949d7;
+    height: 120vh;
+    width: 100%;
+
+    @include respond(phone) {
+        height: 280vh;    
+    }
+}
+
+.about {
+    height: 110vh;
+    width: 100vw;
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    background: -webkit-linear-gradient(to bottom, #bdc3c7, #2c3e50);
+    background: linear-gradient(to top, #bdc3c7, #3e4b58);
+
+    @include respond(tab-port) {
+        height: 140vh;    
+    }
+
+    @include respond(phone) {
+        height: 110vh;    
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    } 
+}
+
+.comments {
+    width: 100vw;
+    height: 145vh;
+    background-color:  white;
+    position: relative;
+    top: -5%;
+    z-index: -1;
+    padding-top: 10rem;
+}

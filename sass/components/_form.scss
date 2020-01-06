@@ -1,0 +1,131 @@
+.form {
+    width: 60rem;
+    height: 90vh;   
+
+    & input {
+        background-color: transparent;
+        border: 2px solid #eee;
+        border-radius: 0.5rem;
+        width: 75%;
+        height: 4rem;
+        display: block;
+        margin: 2rem 0 2rem 4rem;
+        outline: none;
+        padding: 0 2rem;
+        color: #eee;
+
+        &:nth-child(4) {
+            padding-top: 2rem;
+            padding-bottom: 25%;         
+        }
+
+        &::placeholder {
+            color: #eee;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        &:focus {
+            border: 2px solid #3CC194; 
+        }
+
+    } 
+
+    &__btn {
+        margin-left: 4rem;
+        z-index: 0;
+    }
+}
+
+
+// radio buttons
+
+$radioSize: 22px;
+$radioBorder: #D1D7E3;
+$radioActive: #3CC194;
+
+.radio {
+    margin: 2rem 0 3rem 2rem;
+    display: inline-block;
+    cursor: pointer;
+
+    input {
+        display: none;
+        & + span {
+            line-height: $radioSize;
+            height: $radioSize;
+            padding-left: $radioSize;
+            display: block;
+            position: relative;
+            &:not(:empty) {
+                padding-left: $radioSize + 8;
+
+                @include respond(phone) {
+                    padding-left: $radioSize - 2;
+                }
+            }
+            &:before,
+            &:after {
+                content: '';
+                width: $radioSize;
+                height: $radioSize;
+                display: block;
+                border-radius: 50%;
+                left: 0;
+                top: 0;
+                position: absolute;
+
+                @include respond(phone) {
+                    height: $radioSize - 7;
+                    width: $radioSize - 7;
+                }
+            }
+            &:before {
+                background: $radioBorder;
+                transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2);
+            }
+            &:after {
+                background: #fff;
+                transform: scale(.78);
+                transition: transform .6s cubic-bezier(.175, .885, .32, 1.4);
+            }
+        }
+        &:checked + span {
+            &:before {
+                transform: scale(1.04);
+                background: $radioActive;
+            }
+            &:after {
+                transform: scale(.4);
+                transition: transform .3s ease;
+            }
+        }
+    }
+    &:hover {
+        input {
+            & + span {
+                &:before {
+                    transform: scale(.92);
+                }
+                &:after {
+                    transform: scale(.74);
+                }
+            }
+            &:checked + span {
+                &:after {
+                    transform: scale(.4);
+                }
+            }
+        }
+    }
+
+    & span {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #eee;
+    }
+}
+
+.burger-input {
+    visibility: hidden;
+}

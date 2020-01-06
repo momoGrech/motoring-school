@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>quick Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1aa36dae85.js" crossorigin="anonymous"></script>
+</head>
+<body class="body-quiz">
+
+    <header class=" address-header">
+        <div class="header__nav-bar">
+            <a href="/index.html"><img src="/images/logo.svg" alt="logo" class="header__logo"></a>
+            <nav class="header__nav">
+
+              <div id="menuToggle">
+              
+                <input class="burger-input" type="checkbox" />
+                
+                <span></span>
+                <span></span>
+                <span></span>
+    
+                <ul id="menu">
+                  <li class="li--home">
+                    <a class ="link" href="/index.html">Home</a>
+                  </li>
+                  <li class="li--motoring-school">
+                    <a class ="link" href="index.html#motoring-school">Motoring School</a>
+                  </li>
+                  <li class="li--quiz">
+                    <a class ="link" href="#quiz-start.html">Quiz</a>
+                  </li>
+                  <li class="li--about">
+                    <a class ="link" href="index.html#about">About</a>
+                  </li>
+      
+                  <li class="li--address">
+                    <a class ="link" href="address.html">Address</a>
+                  </li>
+                </ul>
+    
+              </div>
+          </nav>
+          </div>
+    </header>
+
+
+
+    <div class="play-game">
+
+            <div id="hud">
+
+                <div id="hud-item">
+                    <p id="progressText" class="hud-prefix"></p>
+                    <div class="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+
+
+                <div class="hud-item">
+                    <h1 class="hud-main-text" id="score"></h1>
+                </div>
+            </div>
+
+            <h2 id="question">What is the answer to this question</h2>
+            <img class="restriction-sign hide" src="/images/waiting-restrictions-sign.png" alt="">
+            
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Choice 9</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text"  data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+        <!-- </div> -->
+    </div>
+<script src="game.js"></script>
+</body >
+</html>

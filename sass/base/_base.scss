@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%; // 1 rem is 10px / 16px * 10%
+  overflow-x: hidden; 
+
+  @include respond(tab-land) { //width < 1200?
+    font-size: 56.25%; // 9px
+  }
+  @include respond(tab-port) { //width < 900?
+    font-size: 50%; //8px
+  }
+  @include respond(phone) { //width < 600?
+    font-size: 40%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background-image: url(/images/background-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.link,
+a {
+  text-decoration: none;
+  text-align: none;
+}

@@ -1,0 +1,103 @@
+.popup {
+    width: 100%;
+    height: 100vh;
+    background-color: #20223bcc;
+    @include fxdTop;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+        animation-name: zoomIn;
+        animation-duration: 0.5s;
+    }
+
+    &__content {
+        @include absCenter;
+        width: 75%;
+        height: 60vh;
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+        border-radius: 3px;
+        position: relative;
+        background: #FF5F6D;
+background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D); 
+background: linear-gradient(to right, #FFC371, #FF5F6D);
+        position: relative;
+    }
+
+    &__left {
+        height: 100%;
+        width: 55%;
+        clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+        background-color: snow;
+        opacity: 0.6;
+    }
+
+// close button
+    &__close {
+        position: absolute;
+        font-size: 3rem;
+        right: 3rem;
+        top: 3rem;
+        line-height: 0;
+        color: grey;
+        cursor: pointer;
+        z-index: 999;
+
+        &:hover {
+            color: #20bf6b;
+        }
+    }
+
+    // popup inner
+    &__category-wrap {
+        height: 100%;
+        width: 80%;
+        padding: 1rem 0 0 2rem;
+        font-size: 1.7rem;
+        line-height: 1.5;
+    }
+
+    &__category {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    & .bold {
+        font-weight: 600;
+        display: block;
+        line-height: 2;
+    }
+
+    &__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    }
+
+    &__submit {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__btn {
+        margin-left: 2rem;
+        display: block;
+    }
+
+    & .form input {
+        padding: 2rem 1rem;
+        border-radius: 0.3rem;
+        margin-left: 2rem;
+        width: 40%;
+
+        @include respond(tab-port) { //width < 900?
+            width: 35%;
+        }
+    }
+}
